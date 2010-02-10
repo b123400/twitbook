@@ -1,0 +1,214 @@
+@charset "UTF-8";
+body {
+	background-color: #9AE4E8;
+	background-image: url(twitter_bg.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+	background-attachment:fixed;
+	overflow-x:hidden;
+	font-family: Arial, Helvetica, sans-serif, Tahoma;
+}
+#logo {
+	position:absolute;
+	top:10px;
+	width:406px;
+	height:94px;
+	z-index:2;
+	margin-left:-203px;
+	background-image: url(index_logo.png);
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+#facebook_bg {
+	position:fixed;
+	/*left:50%;*/
+	top:0;
+	right:0px;
+	height:100%;
+	z-index:1;
+	background-color: #3B5997;
+}
+.facebook_view {
+	left:15%;
+}
+.twitter_view{
+	left:85%;
+}
+.both_view{
+	left:50%;
+}
+#topround {
+	position:absolute;
+	left:50%;
+	top:112px;
+	width:763px;
+	height:149px;
+	z-index:3;
+	margin-left: -381.5px;
+	background-image: url(topbg.png);
+	background-repeat: no-repeat;
+	overflow:visible；
+}
+#mainwrapper {
+	position:absolute;
+	left:50%;
+	top:261px;
+	width:763px;
+	z-index:4;
+	margin-left: -381.5px;
+	background-color: #FFFFFF;
+	overflow: visible;
+	vertical-align: top;
+}
+#form1 {
+	top: 0px;
+	margin-top: 0px;
+}
+li {
+	text-decoration: none;
+	list-style-type: none;
+	/*height: 46px;*/
+	/*background-color:#33CCFF;*/
+	right: 0px;
+}
+ol {
+	padding-left: 0px;
+	margin-top: 0px;
+}
+.facebook_status{
+/*background-image:url(fb_status_bg.png);*/
+background-position:right;
+background-repeat:repeat-y;
+display: block;
+border-bottom-color: rgb(210, 218, 218);
+border-bottom-style: dashed;
+border-bottom-width: 1px;
+}
+.twitter_status{
+/*background-image:url(twitter_status_bg.png);*/
+background-position:left;
+background-repeat:repeat-y;
+display: block;
+border-bottom-color: rgb(210, 218, 218);
+border-bottom-style: dashed;
+border-bottom-width: 1px;
+}
+.avatar{
+	display: block;
+	height: 50px;
+	left: 0px;
+	margin: 0px 10px 0px 5px;
+	overflow: hidden;
+	position: absolute;
+	width: 50px;
+}
+.status_content{
+	display: block;
+	margin-left: 65px;
+	margin-right: 0px;
+	min-height: 50px;
+	overflow: hidden;
+	width: 660px;
+	/*position: absolute;*/
+}
+.twitter_status a {
+	text-decoration: none;
+	color: rgb(0, 132, 180);
+}
+.status_meta{
+	color: rgb(153, 153, 153);
+	display: block;
+	font-family: georgia;
+	font-size: 0.8em;
+	font-style: italic;
+	margin: 3px 0px 0px 0px;
+}#goleft {
+	position:absolute;
+	left:2px;
+	top:2px;
+	width:29px;
+	height:27px;
+	z-index:5;
+	background-image: url(goleft.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+#goright {
+	position:absolute;
+	left:734px;
+	top:2px;
+	width:27px;
+	height:29px;
+	z-index:5;
+	background-image: url(goright.png);
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+#linkage {
+	position:absolute;
+	left:0px;
+	top:100px;
+	width:600px;
+	height:400px;
+	z-index:3;
+	background-image: url(linkage.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.action {
+	/*display: block;
+	height: 48px;
+	line-height: 18px;
+	position:absolute;
+	right: 5px;
+	top: 7px;
+	width: 24px;*/
+	display: block;
+	height: 48px;
+	right: 0px;
+	overflow: hidden;
+	position: absolute;
+	width: 24px;
+	/*bottom: 0px;*/
+}
+.reply_btn {
+	background-image: url(icon_reply.gif);
+	background-repeat: no-repeat;
+	background-position: right top;
+	height: 16px;
+	width: 16px;
+	top: 3px;
+}
+#reply{
+	width: 439px;
+	height:268px;
+	background-image: url(reply_bg.png);
+	display: none;
+	position: absolute;
+	opacity: 0;
+	z-index: 96;
+}
+#reply_text{
+	position: absolute;
+	width: 350px;
+	height: 184px;
+	top: 22px;
+	left: 19px;
+	background-color: #FFFFFF;
+}
+#reply_button{
+	position: absolute;
+	top: 210px;
+	left: 19px;
+	height: 38px;
+	width:256px;
+	cursor: pointer;
+}
+#reply_close{
+	position: absolute;
+	top: 210px;
+	left: 276px;
+	width: 96px;
+	height: 38px;
+	cursor: pointer;
+}
