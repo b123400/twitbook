@@ -17,21 +17,10 @@ $oauth_token = $_REQUEST['oauth_token'];
 $section = $_REQUEST['section'];
 
 /* Clear PHP sessions */
-if ($_REQUEST['test'] === 'clear') {/*{{{*/
+if ($_REQUEST['test'] === 'clear') {
   session_destroy();
   session_start();
-}/*}}}*/
-/*
-if($_SESSION['oauth_access_token']&&$_SESSION['oauth_access_token_secret']&&((!$_COOKIE['twitbook_twitter_access_token']&&!$_COOKIE['twitbook_twitter_access_token_secret'])||($_SESSION['oauth_access_token']!=$_COOKIE['twitbook_twitter_access_token']||$_SESSION['oauth_access_token_secret']!=$_COOKIE['twitbook_twitter_access_token_secret']))){
-	setcookie('twitbook_twitter_access_token', $_SESSION['oauth_access_token'] ,time()+60*60*24*30 ,'/' ,'.b123400.net');
-	setcookie('twitbook_twitter_access_token_secret', $_SESSION['oauth_access_token_secret'] ,time()+60*60*24*30 ,'/' ,'.b123400.net');
-	setcookie('twitbook_twitter_state', $_SESSION['oauth_state'] ,time()+60*60*24*30 ,'/' ,'.b123400.net');
-}
-if(!$_SESSION['oauth_access_token']&&!$_SESSION['oauth_access_token_secret']&&$_COOKIE['twitbook_twitter_access_token']&&$_COOKIE['twitbook_twitter_access_token_secret']){
-	$_SESSION['oauth_access_token']=$_COOKIE['twitbook_twitter_access_token'];
-	$_SESSION['oauth_access_token_secret']=$_COOKIE['twitbook_twitter_access_token_secret'];
-	$_SESSION['oauth_state']=$state=$_COOKIE['twitbook_twitter_state'];
-}*/
+}/
 function makeClickableLinks($text) { 
 
   $text = eregi_replace('(((f|ht){1}tp://)[-a-zA-Z0-9@:%_\+.~#?&//=]+)', 

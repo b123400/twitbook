@@ -7,7 +7,6 @@
 // 
 
 require_once 'facebook.php';
-//require_once 'mysql.php';
 date_default_timezone_set("Asia/Taipei");
 
 $appapikey = 'your facebook key';
@@ -53,19 +52,10 @@ function get_elapsedtime($time) {
 
     return date('h:i A F d, Y', $time);
 
-}/*
-$subed=false;
-if(!facebook_client()->api_client->session_key&&!facebook_client()->get_loggedin_user()&&$_COOKIE['twitbook_facebook_session_key']&&$_COOKIE['twitbook_facebook_user_id']){
-	facebook_client()->set_cookies($_COOKIE['twitbook_facebook_user_id'],$_COOKIE['twitbook_facebook_session_key']);
-	facebook_client()->set_user($_COOKIE['twitbook_facebook_user_id'],$_COOKIE['twitbook_facebook_session_key']);
-	$subed=true;
-}*/
+}
 if(facebook_client()->get_loggedin_user()&&facebook_client()->api_client->session_key&&$_COOKIE['twitbook_facebook_user_id']!=facebook_client()->get_loggedin_user()&&$_COOKIE['twitbook_facebook_user_id']!=facebook_client()->api_client->session_key){
 	setcookie('twitbook_facebook_session_key', facebook_client()->api_client->session_key ,time()+60*60*24*30 ,'/' ,'.b123400.net');
 	setcookie('twitbook_facebook_user_id', $user_id ,time()+60*60*24*30 ,'/' ,'.b123400.net');
 }
-//$user_id=facebook_client()->require_login();
-//$user_id=facebook_client()->get_loggedin_user();
-//facebook_client()->set_user($_GET['fb_sig_user'], $_GET['fb_sig_session_key']);
 $user_id=facebook_client()->get_loggedin_user();
-//print(facebook_client()->api_client->session_key.' and '.facebook_client()->get_loggedin_user());
+?>
